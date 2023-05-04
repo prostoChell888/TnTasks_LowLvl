@@ -16,6 +16,8 @@ public class PalindromeChecker {
     }
 
     public static boolean isPalindrome(int num) {
+        if (num == 0) return true;
+
         int  reverseNum = 0;
 
         while (num != 0) {
