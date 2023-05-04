@@ -18,15 +18,15 @@ public class PalindromeChecker {
     public static boolean isPalindrome(int num) {
         if (num == 0) return true;
 
+        int originNum = num;
         int  reverseNum = 0;
 
         while (num != 0) {
             int digit = num % 10;
             num /= 10;
-            reverseNum = reverseNum  * 10 + digit;
+            reverseNum = reverseNum * 10 + digit;
         }
 
-        return reverseNum == num;
+        return reverseNum == originNum;
     }
-
 }
