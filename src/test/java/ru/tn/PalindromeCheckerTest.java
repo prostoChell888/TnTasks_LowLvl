@@ -34,4 +34,19 @@ class PalindromeCheckerTest {
         assertFalse(actualOutput);
     }
 
+    @ParameterizedTest
+    @ValueSource(ints = { 12, 223221, 1000, 90, 1232})
+    void IsPalindrome_NumIsNotPalindrome_False(int input) {
+        boolean actualOutput = PalindromeChecker.isPalindrome(input);
+
+        assertFalse(actualOutput);
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = { 1, 0, 222, 4444, 123321, 40004, 99, 132231, 454})
+    void IsPalindrome_NumIsPalindrome_True(int input) {
+        boolean actualOutput = PalindromeChecker.isPalindrome(input);
+
+        assertTrue(actualOutput);
+    }
 }
