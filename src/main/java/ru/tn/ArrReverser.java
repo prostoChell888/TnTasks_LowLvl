@@ -3,7 +3,7 @@ package ru.tn;
 import java.util.Arrays;
 
 public class ArrReverser {
-     public static <T> T[] revers(T[] arr) {
+     public static <T> void revers(T[] arr) {
         int left = 0;
         int right = arr.length - 1;
 
@@ -15,8 +15,6 @@ public class ArrReverser {
             left++;
             right--;
         }
-
-        return arr;
     }
 
 }
