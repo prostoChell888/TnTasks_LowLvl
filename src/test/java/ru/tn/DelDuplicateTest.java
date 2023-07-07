@@ -9,12 +9,11 @@ import org.junit.jupiter.params.provider.MethodSource;
 import java.util.stream.Stream;
 
 
-
 class DelDuplicateTest {
 
     @ParameterizedTest
     @MethodSource("provideIntegerArrays")
-    public void testRemoveDuplicates(Integer[] input, Integer[] expectedOutput) {
+    void testRemoveDuplicates(Integer[] input, Integer[] expectedOutput) {
         Integer[] output = DelDuplicate.removeDuplicates(input);
         assertArrayEquals(expectedOutput, output);
     }
@@ -29,7 +28,7 @@ class DelDuplicateTest {
 
     @ParameterizedTest
     @MethodSource("provideDoubleArrays")
-    public void testRemoveDuplicates(Double[] input, Double[] expectedOutput) {
+    void testRemoveDuplicates(Double[] input, Double[] expectedOutput) {
         Double[] output = DelDuplicate.removeDuplicates(input);
         assertArrayEquals(expectedOutput, output);
     }
@@ -38,13 +37,15 @@ class DelDuplicateTest {
         return Stream.of(
                 Arguments.of(new Double[]{1.0, 2.0, 3.0, 4.0, 5.0}, new Double[]{1.0, 2.0, 3.0, 4.0, 5.0}),
                 Arguments.of(new Double[]{1.0, 2.0, 2.0, 3.0, 3.0, 3.0, 4.0, 5.0, 5.0}, new Double[]{1.0, 2.0, 3.0, 4.0, 5.0}),
+                Arguments.of(new Double[]{5.0, 5.0, 4.0, 3.0, 3.0, 3.0, 2.0, 2.0, 1.0}, new Double[]{5.0, 4.0, 3.0, 2.0, 1.0}),
+                Arguments.of(new Double[]{4.0, 3.0, 3.0, 3.0, 5.0, 2.0, 5.0, 2.0, 1.0}, new Double[]{4.0, 3.0, 5.0, 2.0, 1.0}),
                 Arguments.of(new Double[]{}, new Double[]{})
         );
     }
 
     @ParameterizedTest
     @MethodSource("provideFloatArrays")
-    public void testRemoveDuplicates(Float[] input, Float[] expectedOutput) {
+    void testRemoveDuplicates(Float[] input, Float[] expectedOutput) {
         Float[] output = DelDuplicate.removeDuplicates(input);
         assertArrayEquals(expectedOutput, output);
     }
