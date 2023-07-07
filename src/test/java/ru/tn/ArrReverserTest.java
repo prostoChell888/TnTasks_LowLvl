@@ -13,10 +13,10 @@ class ArrReverserTest {
 
     @ParameterizedTest
     @MethodSource("provideDoubleArrays")
-    void revers_ObjectArr_ReversObjectArr(Object[] input, Object[] expectedOutput) {
-        var reversArr = ArrReverser.revers(input);
+    void revers_ObjectArr_ReversObjectArr(Object[] arr, Object[] expectedArr) {
+        ArrReverser.revers(arr);
 
-        assertArrayEquals(expectedOutput, reversArr);
+        assertArrayEquals(expectedArr, arr);
     }
 
 
