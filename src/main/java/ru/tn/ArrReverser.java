@@ -1,6 +1,5 @@
 package ru.tn;
 
-import java.util.Arrays;
 
 public class ArrReverser {
      public static <T> void revers(T[] arr) {
