@@ -2,7 +2,9 @@ package ru.tn;
 
 
 public class ArrReverser {
+
      public static <T> void revers(T[] arr) {
+
         int left = 0;
         int right = arr.length - 1;
 
